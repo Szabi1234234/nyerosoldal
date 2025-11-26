@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">                                 <!-- Karakterkódolás beállítása -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Mobilra reszponzív -->
+    <title>MEGA JACKPOT 777 – INGYEN 500.000 FT MOST!</title> <!-- Böngésző címsor szövege -->
+    <link rel="stylesheet" href="masik.css">               <!-- Külső CSS fájl betöltése -->
+    <link href="https://fonts.googleapis.com/css2?family=Impact&family=Arial+Black&display=swap" rel="stylesheet"> <!-- Google betűtípusok -->
+</head>
+<body>
+
+<div class="grid-container"> <!-- Az egész oldal fő grid konténere -->
+
+    <!-- HEADER – a legfelső ordító rész -->
+    <header class="header">
+        <h1>★★★ MEGA JACKPOT 777 ★★★</h1>                   <!-- Fő cím -->
+        <div class="blink">KATTINTS MOST ÉS NYERJ 500.000 FT-T AZ ELSŐ PÖRGETÉSSEL!!!</div> <!-- Villogó szöveg -->
+        <div class="jackpot-counter">Jackpot: <span id="jackpot">127.483.920</span> Ft</div> <!-- Növekvő jackpot -->
+    </header>
+
+    <!-- BAL OLDALI REKLÁM + TIMER -->
+    <aside class="aside1">
+        <div class="timer">Akció vége: <span id="timer">05:00</span></div> <!-- Működő visszaszámláló -->
+        <div class="bonus blink">+250 INGYEN PÖRGETÉS</div>
+        <div class="bonus">NINCS BEFIZETÉS!</div>
+        <div class="bonus">VIP AJÁNLAT CSAK NEKED</div>
+    </aside>
+
+    <!-- KÖZÉPSŐ RÉSZ – a slot gépek -->
+    <main class="main">
+        <div class="slot-grid">
+            <div class="slot-card">
+                <div class="slot-title">MEGA FORTUNE 777</div>
+                <div class="slot-image">777</div>
+                <a href="payment-scam.html" class="spin-btn">PÖRGETÉS MOST</a> <!-- Átirányít a bankkártyás oldalra -->
+            </div>
+            <div class="slot-card">
+                <div class="slot-title">DIAMOND RUSH</div>
+                <div class="slot-image">♦♦♦</div>
+                <a href="payment-scam.html" class="spin-btn">PÖRGETÉS MOST</a>
+            </div>
+            <div class="slot-card">
+                <div class="slot-title">GOLDEN CHERRY</div>
+                <div class="slot-image">Cherry Cherry Cherry</div>
+                <a href="payment-scam.html" class="spin-btn">PÖRGETÉS MOST</a>
+            </div>
+            <div class="slot-card">
+                <div class="slot-title">BOOK OF MILLIONS</div>
+                <div class="slot-image">Book</div>
+                <a href="payment-scam.html" class="spin-btn">PÖRGETÉS MOST</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- JOBB OLDALI REKLÁM -->
+    <aside class="aside2">
+        <div class="winner blink">Épp most nyert valaki Budapesten 3.200.000 Ft-ot!</div>
+        <div class="winner">Te leszel a következő?</div>
+    </aside>
+
+    <!-- LÁBLÉC -->
+    <footer class="footer">
+        <div class="blink">Már 12.847.392 boldog nyertes ma!</div>
+        <p>© 2025 MegaJackpot777™ – 18+ Felelősségteljes játék </p>
+    </footer>
+
+</div> <!-- grid-container vége -->
+
+<!-- JavaScript rész – a működő timer és jackpot növelő -->
+<script>
+    // 1. Visszaszámláló (5 perc = 300 másodperc)
+    let timeLeft = 300;                                             // Kezdőérték 5:00
+    const timerElement = document.getElementById('timer');          // A timer span eleme
+
+    setInterval(() => {
+        timeLeft--;                                                 // Minden másodpercben csökkenti
+        if (timeLeft <= 0) timeLeft = 300;                          // Ha lejár, újraindul
+        const minutes = String(Math.floor(timeLeft / 60)).padStart(2, '0'); // Perc kiszámolása
+        const seconds = String(timeLeft % 60).padStart(2, '0');     // Másodperc kiszámolása
+        timerElement.textContent = minutes + ':' + seconds;         // Kiírja a formátumban
+    }, 1000);                                                       // 1000 ms = 1 másodperc
+
+    // 2. Jackpot számláló növelése (véletlenszerűen)
+    const jackpotElement = document.getElementById('jackpot');
+    setInterval(() => {
+        let current = parseInt(jackpotElement.textContent.replace(/\./g, ''));
+        current += Math.floor(Math.random() * 8000) + 1000;         // +1000 és +9000 között
+        jackpotElement.textContent = current.toLocaleString('hu-HU'); // Magyar ezer elválasztó
+    }, 3000);                                                       // 3 másodpercenként frissül
+</script>
+
+</body>
+</html>
