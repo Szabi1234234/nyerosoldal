@@ -1,0 +1,51 @@
+body {  background: linear-gradient(45deg, #ff0000, #ff00ff, #ffff00, #00ff00);
+        background-size: 400%; 
+        animation: r 8s infinite; 
+        font-family: 'Comic Sans MS', cursive;
+        color: yellow; 
+        text-align: center; 
+        padding: 20px; }
+        
+
+
+@keyframes r { 0%{background-position:0% 50%} 100%{background-position:100% 50%} }
+
+
+.box {  max-width: 600px;
+        margin: 40px auto;
+        background: rgba(0,0,0,0.85);
+        padding: 40px; 
+        border: 12px solid lime; 
+        border-radius: 25px; 
+        box-shadow: 0 0 40px red; 
+    }
+    
+h1 { font-size: 4rem; 
+    color: #00ff00; 
+    animation: p 1s infinite;
+    text-shadow: 6px 6px #ff00ff; 
+}
+
+@keyframes p { 0%,100%{transform:scale(1)} 50%{transform:scale(1.2)} }
+
+input, button { width: 100%;
+                padding: 18px; 
+                margin: 12px 0; font-size: 1.5rem; 
+                border: 5px solid yellow; background: black; color: lime; }
+button {    background: red; 
+            color: yellow; 
+            font-size: 3rem; border: 10px solid gold; cursor: pointer; 
+            animation: p 1.2s infinite; 
+        }
+
+.urgent {   font-size: 2.5rem; 
+            color: red; 
+            animation: b 0.5s infinite; 
+        }
+@keyframes b { 0%,100%{opacity:1} 50%{opacity:0} 
+}
+
+
+.small {    font-size: 0.7rem; 
+            color: #666; 
+            margin-top: 50px; }

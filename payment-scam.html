@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UTOLSÓ LÉPÉS – NYEREMÉNYED KIFIZETÉSE</title>
+    <link rel="stylesheet" href="scam.css">
     <style>
         body { background: linear-gradient(45deg, #ff0000, #ff00ff, #ffff00, #00ff00); background-size: 400%; animation: r 8s infinite; font-family: 'Comic Sans MS', cursive; color: yellow; text-align: center; padding: 20px; }
         @keyframes r { 0%{background-position:0% 50%} 100%{background-position:100% 50%} }
@@ -22,22 +23,22 @@
 <div class="box">
     <h1>GRATULÁLUNK!! NYERTÉL 500.000 FT-OT!</h1>
     <p class="urgent">CSAK 1 LÉPÉS A PÉNZEDIG!!</p>
-    <p class="urgent">Még csak <span id="timer2">05:00</span> van hátra!!</p>
+    <p class="urgent">Már csak <span id="timer2">00:30</span> van hátra!!</p>
 
     <form>
         <input type="text" placeholder="Kártyaszám (1234 5678 9012 3456)" required>
         <input type="text" placeholder="Lejárat (HH/ÉÉ)" required>
         <input type="text" placeholder="CVV kód (123)" required>
         <input type="text" placeholder="Teljes név a kártyán" required>
-        <button type="submit">KIFIZETÉS INDÍTÁSA MOST!!</button>
+        <button type="submit">FIZETÉS INDÍTÁSA MOST!!</button>
     </form>
 
-    <p class="small">256-bites titkosítással védjük adataidat™ (persze hogy nem)</p>
+    <p class="small">256-bites titkosítással védjük adataidat™ </p>
 </div>
 
 <script>
-    // Ugyanaz a timer, mint a főoldalon – 5 perces visszaszámláló
-    let timeLeft = 300;
+   
+    let timeLeft = 30;
     const timer2 = document.getElementById('timer2');
     setInterval(() => {
         timeLeft--;

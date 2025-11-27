@@ -9,9 +9,10 @@ body {
     text-shadow: 3px 3px 0 #000;
     min-height: 100vh;
 }
+
 @keyframes rainbow { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
 
-.grid-container {                                                    /* Fő grid elrendezés */
+.grid-container {                                                    
     display: grid;
     gap: 20px;
     max-width: 1400px;
@@ -24,8 +25,17 @@ body {
         "footer footer footer";
 }
 
-.header  { grid-area: header; background: rgba(0,0,0,0.7); padding: 30px; border: 10px solid gold; border-radius: 20px; text-align:center; }
-.aside1  { grid-area: aside1; background: rgba(0,0,0,0.7); padding: 25px; border: 8px solid red; border-radius: 15px; }
+.header  {  grid-area: header; 
+            background: rgba(0,0,0,0.7); 
+            padding: 30px; border: 10px solid gold; 
+            border-radius: 20px; 
+            text-align:center; 
+}
+
+.aside1  {  grid-area: aside1; 
+            background: rgba(0,0,0,0.7); 
+            padding: 25px; border: 8px solid red; 
+            border-radius: 15px; }
 .main    { grid-area: main; }
 .aside2  { grid-area: aside2; background: rgba(0,0,0,0.7); padding: 25px; border: 8px solid red; border-radius: 15px; }
 .footer  { grid-area: footer; background: black; padding: 25px; border: 8px solid lime; text-align:center; font-size:1.3rem; }
